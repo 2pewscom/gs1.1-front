@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>겜쓰(GameSS) - 로그인</title>
+  <title>Sign Up | Unify - Multipurpose Responsive Template</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.ico">
@@ -48,13 +49,13 @@
                     <form class="js-validate needs-validation" novalidate>
                       <div class="text-center">
                         <div class="mb-5">
-                          <h3 class="card-title">겜쓰 로그인</h3>
+                          <h3 class="card-title">계정을 생성하기</h3>
                         </div>
 
                         <a class="btn btn-white btn-lg d-grid mb-4" href="#">
                           <span class="d-flex justify-content-center align-items-center">
                             <img class="avatar avatar-xss me-2" src="./assets/svg/brands/google-icon.svg" alt="Image Description">
-                            구글로 로그인
+                            구글로 회원가입
                           </span>
                         </a>
 
@@ -63,40 +64,65 @@
 
                       <!-- Form -->
                       <div class="mb-4">
-                        <label class="form-label" for="signinSrEmail">이메일 or 아이디</label>
-                        <input type="email" class="form-control form-control-lg" name="email" id="signinSrEmail" tabindex="1" placeholder="email@address.com" aria-label="email@address.com" required>
-                        <span class="invalid-feedback">이메일 주소 또는 아이디를 입력해주세요.</span>
+                        <label class="form-label" for="signupSrEmail">이메일</label>
+                        <input type="email" class="form-control form-control-lg" name="email" id="signupSrEmail" placeholder="Markwilliams@site.com" aria-label="Markwilliams@site.com" required>
+                        <span class="invalid-feedback">올바른 이메일 주소를 입력하세요.</span>
                       </div>
                       <!-- End Form -->
 
                       <!-- Form -->
                       <div class="mb-4">
-                        <label class="form-label" for="signupSrPassword" tabindex="0">비밀번호</label>
+                        <label class="form-label" for="signupSrPassword">비밀번호</label>
 
                         <div class="input-group-merge">
-                          <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required minlength="8"
+                          <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSrPassword" placeholder="8자 이상 입력해주세요." aria-label="8자 이상 입력해주세요." required minlength="8"
                                  data-hs-toggle-password-options='{
-                                   "target": "#changePassTarget",
+                                   "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],
                                    "defaultClass": "bi-eye-slash",
                                    "showClass": "bi-eye",
-                                   "classChangeTarget": "#changePassIcon"
+                                   "classChangeTarget": ".js-toggle-password-show-icon-1"
                                  }'>
-                          <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
-                            <i id="changePassIcon" class="bi-eye"></i>
+                          <a class="js-toggle-password-target-1 input-group-append input-group-text" href="javascript:;">
+                            <i class="js-toggle-password-show-icon-1 bi-eye"></i>
                           </a>
-
-                          <span class="invalid-feedback">올바른 비밀번호를 입력해주세요.</span>
+          
+                          <span class="invalid-feedback">비밀번호가 올바르지 않습니다. 다시 입력하세요.</span>
                         </div>
                       </div>
                       <!-- End Form -->
 
-                      <div class="d-flex justify-content-end mb-4">
-                        <a class="form-label-link" href="./mypage-reset-password.html">비밀번호를 잊어버리셨나요?</a>
+                      <!-- Form -->
+                      <div class="mb-4">
+                        <label class="form-label" for="signupSrConfirmPassword">비밀번호 확인</label>
+
+                        <div class="input-group-merge">
+                          <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupSrConfirmPassword" placeholder="8자 이상 입력해주세요." aria-label="8자 이상 입력해주세요." required minlength="8"
+                                 data-hs-toggle-password-options='{
+                                   "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],
+                                   "defaultClass": "bi-eye-slash",
+                                   "showClass": "bi-eye",
+                                   "classChangeTarget": ".js-toggle-password-show-icon-2"
+                                 }'>
+                          <a class="js-toggle-password-target-2 input-group-append input-group-text" href="javascript:;">
+                            <i class="js-toggle-password-show-icon-2 bi-eye"></i>
+                          </a>
+          
+                          <span class="invalid-feedback">비밀번호가 일치하지 않습니다.</span>
+                        </div>
                       </div>
+                      <!-- End Form -->
+
+                      <!-- Form Check -->
+                      <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" value="" id="termsCheckbox" required>
+                        <label class="form-check-label" for="termsCheckbox">나는 <a href="#">약관</a>에 동의합니다.</label>
+                        <span class="invalid-feedback">약관에 동의해주세요.</span>
+                      </div>
+                      <!-- End Form Check -->
 
                       <div class="d-grid gap-4">
                         <button type="submit" class="btn btn-primary btn-lg">회원가입</button>
-                        <p class="card-text text-muted">아직 계정이 없으신가요? <a class="link" href="./page-signup.html">여기서 회원가입</a></p>
+                        <p class="card-text text-muted">이미 회원이라면 <a class="link" href="./page-login.html">로그인</a></p>
                       </div>
                     </form>
                     <!-- End Form -->
@@ -105,18 +131,18 @@
                 <!-- End Col -->
                   
                 <div class="col-md-4 d-md-flex justify-content-center flex-column bg-soft-primary p-8 p-md-5" style="background-image: url(./assets/svg/components/wave-pattern.svg);">
-                  <h5 class="mb-4">겜쓰에는 다양한 게임 자료가 있습니다.</h5>
+                    <h5 class="mb-4">겜쓰에는 다양한 게임 자료가 있습니다.</h5>
 
-                  <!-- List Checked -->
-                  <ul class="list-checked list-checked-primary list-py-2">
-                    <li class="list-checked-item">게임 공략집, 에디터, 한글패치</li>
-                    <li class="list-checked-item">에뮬게임, 고전게임 수 많은 게임자료가 가득</li>
-                  </ul>
-                  <!-- End List Checked -->
-
-                  <span class="d-block">
-                    <a class="link link-pointer" href="https://www.gamess.co.kr">더 많은 정보는..</a>
-                  </span>
+                    <!-- List Checked -->
+                    <ul class="list-checked list-checked-primary list-py-2">
+                      <li class="list-checked-item">게임 공략집, 에디터, 한글패치</li>
+                      <li class="list-checked-item">에뮬게임, 고전게임 수 많은 게임자료가 가득</li>
+                    </ul>
+                    <!-- End List Checked -->
+  
+                    <span class="d-block">
+                      <a class="link link-pointer" href="https://www.gamess.co.kr">더 많은 정보는..</a>
+                    </span>
                 </div>
                 <!-- End Col -->
               </div>
