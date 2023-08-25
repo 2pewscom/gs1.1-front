@@ -1,5 +1,9 @@
 <?php
 
-메롱대장
-테스트입니다
+include("main-header.html");
+include("main-gnb.html");
+include("main-contents.html");
+include("main-footer.html");
+
+
 ?>
