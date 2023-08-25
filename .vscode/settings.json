@@ -1,0 +1,6 @@
+{
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "php.executablePath": "/User/yjhwang/Documents/Github/GS1.1/"
+}
