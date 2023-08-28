@@ -328,8 +328,9 @@
 
     <hr>
 
-    <div class="row">
-        <form>
+  
+      <div class="row">
+        <form>     
             <!-- Select -->
             <div class="mb-3">            
                 <label class="form-label" for="exampleFormControlInput1">자료 구분</label>                
@@ -342,13 +343,14 @@
                 </select>
                 <!-- End Select -->
             </div>
-
-            <div class="w-50">
+            <div class="w-50 mb-3">
               <label class="form-label" for="exampleFormControlInput1">게임명</label>
               <input type="text" id="exampleFormControlInput1" class="form-control" placeholder="게임명 입력">
+            </div>
+            <div class="w-50 mb-3">
+              <label class="form-label" for="exampleFormControlInput1"></label>
               <button type="button" class="btn btn-primary btn-sm">게임찾기</button>
             </div>
-          
             <div class="mb-3">
               <label class="form-label" for="exampleFormControlInput1">제목</label>
               <input type="text" id="exampleFormControlInput1" class="form-control" placeholder="제목을 입력하세요.">
@@ -361,7 +363,7 @@
           
             <div class="mb-3">
               <label class="form-label" for="exampleFormControlTextarea1">내용</label>
-              <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="내용을 입력해주세요." rows="15"></textarea>
+              <div id="summernote"></div>
             </div>
 
             <div class="mb-3">
@@ -376,18 +378,14 @@
 
 
           </form>
-    </div>
-
-    <div id="summernote">Hello Summernote</div>
-    <form method="post">
-      <textarea id="summernote" name="editordata"></textarea>
-    </form>
-
-   <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-  </script>   
+    </div>   
+    <script>
+      $('#summernote').summernote({
+        placeholder: '내용을 입력해주세요',
+        tabsize: 2,
+        height: 200
+      });
+    </script> 
 
 
 
